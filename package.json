@@ -1,0 +1,20 @@
+{
+  "name": "react-pure-spinners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdenguir/react-pure-spinners.git"
+  },
+  "keywords": ["react", "pure", "css", "spinners", "loaders", "loading"],
+  "author": "Hafid Denguir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hdenguir/react-pure-spinners/issues"
+  },
+  "homepage": "https://github.com/hdenguir/react-pure-spinners#readme"
+}
