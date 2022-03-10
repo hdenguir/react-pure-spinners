@@ -1,7 +1,3 @@
-import React from 'react'
-
-const Spinner = (props) => {
-  return <h1>spinner</h1>
-}
-
-export default Spinner
+export * from './Ellipsis'
+export * from './Ripple'
+export * from './Ring'
