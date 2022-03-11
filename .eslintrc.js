@@ -6,7 +6,8 @@ module.exports = {
   extends: [
     'standard',
     'plugin:react/recommended',
-    'plugin:storybook/recommended'
+    'plugin:storybook/recommended',
+    'plugin:jest/recommended'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
