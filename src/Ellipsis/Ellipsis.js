@@ -9,7 +9,6 @@ const Ellipsis = () => (
       <div></div>
       <div></div>
       <div></div>
-      <div></div>
     </div>
   </>
 )

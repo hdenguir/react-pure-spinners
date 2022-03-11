@@ -11,8 +11,9 @@
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook src/*",
     "test": "jest",
+    "test:staged": "jest -o",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
   },

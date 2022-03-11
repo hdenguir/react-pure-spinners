@@ -3,4 +3,4 @@
 
 yarn run lint:fix
 
-yarn run test
+yarn run test:staged
