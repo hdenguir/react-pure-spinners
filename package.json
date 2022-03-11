@@ -5,6 +5,9 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "sideEffects": "false",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint '**/*.js' --write",
@@ -17,8 +20,9 @@
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "test:watch": "jest --watch",
-    "predeploy":"yarn run build-storybook",
-    "deploy": "gh-pages -d storybook-static"
+    "predeploy": "yarn run build-storybook",
+    "deploy": "gh-pages -d storybook-static",
+    "prepublish": "yarn run build"
   },
   "repository": {
     "type": "git",
@@ -37,7 +41,7 @@
   "bugs": {
     "url": "https://github.com/hdenguir/react-pure-spinners/issues"
   },
-  "homepage": "https://github.com/hdenguir/react-pure-spinners#readme",
+  "homepage": "https://hdenguir.github.io/react-pure-spinners/",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-runtime": "^7.17.0",
