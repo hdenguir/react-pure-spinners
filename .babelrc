@@ -3,11 +3,17 @@
     [
       "@babel/preset-env",
       {
-        "targets": ">0.2%, not dead, not op_mini all"
+        "targets": {
+          "browsers": ">0.2%, not dead, not op_mini all",
+          "node": "current"
+        }
       }
     ],
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  "plugins": ["@babel/plugin-transform-runtime"]
+  "plugins": ["@babel/plugin-transform-runtime"],
+  "env": {
+    "test": { "presets": ["@babel/env", "@babel/react"] }
+  }
 }
