@@ -31,9 +31,11 @@ import { Ellipsis } from 'react-pure-spinners'
 ```
 
 ## Examples
-- [UMD via CDN] (./examples/cdn)
-- [Creat-React-App] (./examples/cra)
-- [Server-Side Rendering] (./examples/ssr)
+
+- [UMD via CDN](./examples/cdn)
+- [Create React App](./examples/cra)
+- [Server-Side Rendering](./examples/ssr)
+  
 ## Coyright
 
 CSS spinners from [loading.io](https://loading.io)
