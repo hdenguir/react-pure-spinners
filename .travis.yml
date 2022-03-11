@@ -5,7 +5,8 @@ node_js:
 branches:
   only:
     - master
-before_script: .travis/before_script.sh
+before_script:
+  - git clone --progress --verbose git@github.com:hdenguir/react-pure-spinners.git tmp/react-pure-spinners
 script: echo -e " >>> Do something... \"grunt\" for example\n"
 after_success: .travis/after_success.sh
 env:
