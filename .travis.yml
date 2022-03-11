@@ -10,5 +10,5 @@ script: echo -e " >>> Do something... \"grunt\" for example\n"
 after_success: .travis/after_success.sh
 env:
   global:
-    - REPO="git@github.com:<org>/<repo>.git"
+    - REPO="git@github.com:hdenguir/react-pure-spinners.git"
     - secure: ! HA256:Rc+u+niEnBU0W/VCCY7D8WLGwra5KOJuq0fHy7H9lfc
