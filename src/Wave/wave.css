@@ -1,0 +1,48 @@
+:root {
+  --rps-wave-color: #fff;
+  --rps-wave-size: 64px;
+  --rps-wave-thickness: 12px;
+}
+
+.rps-wave {
+  display: inline-block;
+  position: relative;
+  width: var(--rps-wave-size);
+  height: var(--rps-wave-size);
+}
+
+.rps-wave div {
+  display: inline-block;
+  position: absolute;
+  left: calc(var(--rps-wave-size) / 10);
+  width: var(--rps-wave-thickness);
+  background: var(--rps-wave-color);
+  animation: rps-wave 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.rps-wave div:nth-child(1) {
+  left: calc(var(--rps-wave-size) / 10);
+  animation-delay: -0.24s;
+}
+
+.rps-wave div:nth-child(2) {
+  left: calc(var(--rps-wave-size) / 2.5);
+  animation-delay: -0.12s;
+}
+
+.rps-wave div:nth-child(3) {
+  left: calc(var(--rps-wave-size) / 1.42857);
+  animation-delay: 0;
+}
+
+@keyframes rps-wave {
+  0% {
+    top: calc(var(--rps-wave-size) / 10);
+    height: calc(var(--rps-wave-size) / 1.25);
+  }
+  50%,
+  100% {
+    top: calc(var(--rps-wave-size) / 3.33333);
+    height: calc(var(--rps-wave-size) / 2.5);
+  }
+}

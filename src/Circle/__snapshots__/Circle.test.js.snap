@@ -2,12 +2,9 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="rps-ring"
+  className="rps-circle"
   style={Object {}}
 >
-  <div />
-  <div />
-  <div />
   <div />
 </div>
 `;

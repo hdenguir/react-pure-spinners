@@ -1,16 +1,29 @@
 import React from 'react'
+import { Ring as RingComp } from '../Ring'
 
-import { Ring } from '../Ring'
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'React Pure Spinners',
-  component: Ring
+  title: 'Components/Ring',
+  component: RingComp,
+  argTypes: {
+    size: {
+      control: { type: 'range', min: 20, max: 200, step: 1 }
+    },
+    thickness: {
+      control: { type: 'range', min: 2, max: 12, step: 1 }
+    },
+    color: {
+      control: { type: 'color' }
+    },
+    className: { table: { disable: true } },
+    style: { table: { disable: true } }
+  }
 }
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const RingTemplate = (args) => <Ring {...args} />
+const RingTemplate = (args) => <RingComp {...args} />
 
-export const RingComponent = RingTemplate.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-RingComponent.args = {}
+export const Ring = RingTemplate.bind({})
+Ring.args = {
+  color: '#d36ac2',
+  size: 64,
+  thickness: 6
+}

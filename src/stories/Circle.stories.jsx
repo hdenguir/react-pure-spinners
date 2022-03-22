@@ -1,9 +1,9 @@
 import React from 'react'
-import { Ellipsis as EllipsisComp } from '../Ellipsis'
+import { Circle as CircleComp } from '../Circle'
 
 export default {
-  title: 'Components/Ellipsis',
-  component: EllipsisComp,
+  title: 'Components/Circle',
+  component: CircleComp,
   argTypes: {
     size: {
       control: { type: 'range', min: 20, max: 200, step: 1 }
@@ -16,10 +16,10 @@ export default {
   }
 }
 
-const EllipsisTemplate = (args) => <EllipsisComp {...args} />
+const CircleTemplate = (args) => <CircleComp {...args} />
 
-export const Ellipsis = EllipsisTemplate.bind({})
-Ellipsis.args = {
+export const Circle = CircleTemplate.bind({})
+Circle.args = {
   color: '#d36ac2',
   size: 64
 }

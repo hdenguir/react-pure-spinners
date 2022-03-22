@@ -1,0 +1,40 @@
+:root {
+  --rps-ripple-color: #fff;
+  --rps-ripple-size: 64px;
+  --rps-ripple-thickness: 4px;
+}
+
+.rps-ripple {
+  display: inline-block;
+  position: relative;
+  width: var(--rps-ripple-size);
+  height: var(--rps-ripple-size);
+}
+
+.rps-ripple div {
+  position: absolute;
+  border: var(--rps-ripple-thickness) solid var(--rps-ripple-color);
+  border-radius: 50%;
+  animation: rps-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.rps-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes rps-ripple {
+  0% {
+    top: calc(var(--rps-ripple-size) / 2.22222);
+    left: calc(var(--rps-ripple-size) / 2.22222);
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: calc(var(--rps-ripple-size) / 1.11111);
+    height: calc(var(--rps-ripple-size) / 1.11111);
+    opacity: 0;
+  }
+}

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Ellipsis as EllipsisComp } from '../Ellipsis'
+import { Grid as GridComp } from '../Grid'
 
 export default {
-  title: 'Components/Ellipsis',
-  component: EllipsisComp,
+  title: 'Components/Grid',
+  component: GridComp,
   argTypes: {
     size: {
       control: { type: 'range', min: 20, max: 200, step: 1 }
@@ -16,10 +16,10 @@ export default {
   }
 }
 
-const EllipsisTemplate = (args) => <EllipsisComp {...args} />
+const GridTemplate = (args) => <GridComp {...args} />
 
-export const Ellipsis = EllipsisTemplate.bind({})
-Ellipsis.args = {
+export const Grid = GridTemplate.bind({})
+Grid.args = {
   color: '#d36ac2',
   size: 64
 }

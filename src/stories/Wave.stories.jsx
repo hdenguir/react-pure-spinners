@@ -1,9 +1,10 @@
 import React from 'react'
-import { Ripple as RippleComp } from '../Ripple'
+
+import { Wave as WaveComp } from '../Wave'
 
 export default {
-  title: 'Components/Ripple',
-  component: RippleComp,
+  title: 'Components/Wave',
+  component: WaveComp,
   argTypes: {
     size: {
       control: { type: 'range', min: 20, max: 200, step: 1 }
@@ -19,10 +20,10 @@ export default {
   }
 }
 
-const RippleTemplate = (args) => <RippleComp {...args} />
+const WaveTemplate = (args) => <WaveComp {...args} />
 
-export const Ripple = RippleTemplate.bind({})
-Ripple.args = {
+export const Wave = WaveTemplate.bind({})
+Wave.args = {
   color: '#d36ac2',
   size: 64,
   thickness: 6

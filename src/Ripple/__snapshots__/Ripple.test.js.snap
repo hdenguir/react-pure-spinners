@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Redners Correctly 1`] = `
-Array [
-  <style>
-    [object Object]
-  </style>,
-  <div
-    className="lds-ripple"
-  >
-    <div />
-    <div />
-  </div>,
-]
+exports[`renders correctly 1`] = `
+<div
+  className="rps-ripple"
+  style={Object {}}
+>
+  <div />
+  <div />
+</div>
 `;

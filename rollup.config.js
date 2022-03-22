@@ -1,7 +1,8 @@
 import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
-import { string } from 'rollup-plugin-string'
+import commonjs from '@rollup/plugin-commonjs'
+import postcss from 'rollup-plugin-postcss'
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -32,8 +33,17 @@ const common = {
   external: ['react'],
   plugins: [
     resolve(),
-    babel({ exclude: 'node_modules/**', runtimeHelpers: true }),
-    string({ include: '**/*.css' }),
+    babel({
+      exclude: 'node_modules/**',
+      runtimeHelpers: true,
+      extensions: ['.js', '.jsx']
+    }),
+
+    postcss({
+      extract: 'style.min.css',
+      minimize: true
+    }),
+    commonjs(),
     production && terser()
   ]
 }
